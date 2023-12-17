@@ -3,6 +3,7 @@ import datetime
 import random
 import uuid
 import sqlite3
+i
 
 def name():
     input_name = input("Enter your name: ")
