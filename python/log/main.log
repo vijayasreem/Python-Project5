@@ -71,3 +71,108 @@
 2023-12-17 22:00:07,542 INFO root Program Started
 2023-12-17 22:00:08,927 INFO root User Choice is 1
 2023-12-17 22:00:10,041 INFO root User name is ldflg
+2023-12-19 18:40:25,955 INFO root Logging is working
+2023-12-19 18:40:25,963 INFO root Program Started
+2023-12-19 18:40:25,963 INFO root Program Started
+2023-12-19 18:40:29,061 INFO root User Choice is 1
+2023-12-19 18:40:30,799 INFO root User name is saif
+2023-12-19 18:40:32,372 INFO root User is 19 years old
+2023-12-19 18:40:36,701 INFO root User gmail is hh@fdogjçàe'çàçrçà)ze
+2023-12-19 18:40:38,511 ERROR root Invalid Prefix, Only 3 Digits Allowed
+2023-12-19 18:40:40,481 INFO root User phone number prefix is +33
+2023-12-19 18:40:46,255 ERROR root Invalid Phone Number, Only 7 Digits Allowed
+2023-12-19 18:40:47,286 ERROR root Invalid Prefix, Only 3 Digits Allowed
+2023-12-19 18:40:49,505 INFO root User phone number prefix is +33
+2023-12-19 18:40:51,920 INFO root User phone number is +331234567
+2023-12-19 18:40:54,722 INFO root User address is 44 kdfz,md
+2023-12-19 18:40:54,723 INFO root User ID is 27869b26-9614-4d8f-b053-1777a34f7720
+2023-12-19 18:40:54,723 INFO root User Balance is 0
+2023-12-19 18:45:30,880 INFO root Logging is working
+2023-12-19 18:45:30,880 INFO root Program Started
+2023-12-19 18:45:30,880 INFO root Program Started
+2023-12-19 18:45:33,058 INFO root User Choice is 1
+2023-12-19 18:45:39,259 INFO root User name is Saif
+2023-12-19 18:45:40,899 INFO root User is 19 years old
+2023-12-19 18:45:44,613 INFO root User gmail is accounfidfhkd
+2023-12-19 18:45:46,731 INFO root User phone number prefix is +33
+2023-12-19 18:45:58,418 INFO root User phone number is +331234567
+2023-12-19 18:46:00,226 INFO root User address is kk
+2023-12-19 18:46:00,226 INFO root User ID is b84f1463-fe78-4f46-9d4c-30d766472140
+2023-12-19 18:46:00,226 INFO root User Balance is 0
+2023-12-19 18:46:23,959 INFO root Logging is working
+2023-12-19 18:46:23,959 INFO root Program Started
+2023-12-19 18:46:23,959 INFO root Program Started
+2023-12-19 18:49:34,921 INFO root User Choice is 
+2023-12-19 18:49:34,922 ERROR root Invalid Choice , Only Numbers Allowed
+2023-12-19 18:49:39,363 INFO root Logging is working
+2023-12-19 18:49:39,365 INFO root Program Started
+2023-12-19 18:49:39,365 INFO root Program Started
+2023-12-19 18:49:40,873 INFO root User Choice is 1
+2023-12-19 18:49:43,056 INFO root User name is saif
+2023-12-19 18:49:44,495 INFO root User is 19 years old
+2023-12-19 18:49:46,123 INFO root User gmail is jdfnkdnlkf
+2023-12-19 18:50:16,995 INFO root Logging is working
+2023-12-19 18:50:16,995 INFO root Program Started
+2023-12-19 18:50:16,995 INFO root Program Started
+2023-12-19 18:50:18,359 INFO root User Choice is 1
+2023-12-19 18:50:20,382 INFO root User name is saif
+2023-12-19 18:50:21,896 INFO root User is 19 years old
+2023-12-19 18:50:23,122 INFO root User gmail is kjdfngkdfnlg
+2023-12-19 18:50:23,122 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:50:23,123 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:38,193 INFO root User gmail is 
+2023-12-19 18:51:38,201 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:38,201 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:39,721 INFO root User gmail is 
+2023-12-19 18:51:39,721 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:39,721 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:40,713 INFO root User gmail is 
+2023-12-19 18:51:40,713 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:40,713 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:40,944 INFO root User gmail is 
+2023-12-19 18:51:40,944 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:40,945 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,121 INFO root User gmail is 
+2023-12-19 18:51:41,121 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,121 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,311 INFO root User gmail is 
+2023-12-19 18:51:41,317 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,317 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,501 INFO root User gmail is 
+2023-12-19 18:51:41,501 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,501 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,685 INFO root User gmail is 
+2023-12-19 18:51:41,685 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,685 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,851 INFO root User gmail is 
+2023-12-19 18:51:41,851 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:51:41,860 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,033 INFO root User gmail is 
+2023-12-19 18:53:43,033 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,034 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,476 INFO root User gmail is 
+2023-12-19 18:53:43,477 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,477 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,652 INFO root User gmail is 
+2023-12-19 18:53:43,653 ERROR root Email validation error: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:53:43,653 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:58:29,303 INFO root Logging is working
+2023-12-19 18:58:29,303 INFO root Program Started
+2023-12-19 18:58:29,303 INFO root Program Started
+2023-12-19 18:58:31,082 INFO root User Choice is 1
+2023-12-19 18:58:32,855 INFO root User name is saif
+2023-12-19 18:58:34,872 INFO root User is 23 years old
+2023-12-19 18:58:36,165 INFO root User gmail is difohgkdfnklg,d
+2023-12-19 18:58:36,167 ERROR root Invalid email entered by the user.
+2023-12-19 18:58:36,168 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 18:58:49,071 INFO root User gmail is 
+2023-12-19 19:00:38,907 INFO root Logging is working
+2023-12-19 19:00:38,907 INFO root Program Started
+2023-12-19 19:00:38,907 INFO root Program Started
+2023-12-19 19:00:40,219 INFO root User Choice is 1
+2023-12-19 19:00:41,851 INFO root User name is saif
+2023-12-19 19:00:43,462 INFO root User is 56 years old
+2023-12-19 19:00:44,827 INFO root User gmail is jdfiokdnfkd
+2023-12-19 19:00:44,828 ERROR root Invalid email entered by the user.
+2023-12-19 19:00:44,828 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
+2023-12-19 19:00:49,345 INFO root User gmail is 

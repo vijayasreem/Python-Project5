@@ -4,7 +4,15 @@ import random
 import uuid
 import sqlite3
 import logging
+from email_validator import validate_email, EmailNotValidError
+from colorama import Fore, Style, init
 
+
+
+
+# colorma Setup
+init(autoreset=True)
+# Logs Setup
 log_dir = "C:\\Users\\petmk\\Desktop\\BankingManagement\\python\\log"
 log_file = os.path.join(log_dir, "main.log")
 os.makedirs(log_dir, exist_ok=True)
@@ -37,10 +45,35 @@ def age():
         return input_age
 
 
+def gmail():
+    input_gmail = input("Enter your gmail: ")
+    logging.info(f"User gmail is {input_gmail}")
+    return input_gmail
+   
+def check(input_gmail):
+    try:
+        if not input_gmail : 
+            exit()
+        v = validate_email(input_gmail) 
+        validated_email = v["email"]
+        if not v["valid"]:
+            logging.error(f"The provided email '{input_gmail}' is not valid.")
+            raise EmailNotValidError(input_gmail)
+        return validated_email
+    except EmailNotValidError as e:
+        print(f"{Fore.RED}Invalid email. Please try again.{Style.RESET_ALL}")
+        logging.error("Invalid email entered by the user.")
+        raise
+
+
+
 def address():
     input_address = input("Enter your address: ")
     logging.info(f"User address is {input_address}")
     return input_address
+    #TODO ; if the adress exists or not (API) of google maps or something
+    
+    
 
 
 def phone_number():
@@ -62,6 +95,7 @@ def phone_number():
             print("Invalid Phone Number, Only 7 Digits Allowed")
             logging.error("Invalid Phone Number, Only 7 Digits Allowed")
 
+            #TODO ; make it better 
 
 def id_generator():
     unique_id = str(uuid.uuid4())
@@ -74,7 +108,7 @@ def balance():
     return 0
 
 
-def welcome(user_name, user_id, user_balance):
+def welcome(user_name, user_id, user_balance ,):
     welcome_message = f"""
     Welcome {user_name} to Kernel Bank 🏦  :
     Your ID is {user_id}
@@ -92,8 +126,16 @@ def create_account():
     print("Creating Account...")
     user_name = name()
     user_age = age()
-    user_address = address()
+    while True:
+        try:
+            user_gmail = gmail()
+            user_gmail = check(user_gmail)
+            break  
+        except EmailNotValidError as e:
+            print(f"{Fore.GREEN}Invalid email: {e}{Style.RESET_ALL}")
+            logging.error(f"Invalid email: {e}")
     user_phone_number = phone_number()
+    user_address = address()
     user_id = id_generator()
     user_balance = balance()
     user_welcome_message = welcome(user_name, user_id, user_balance)
