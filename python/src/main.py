@@ -6,6 +6,8 @@ import sqlite3
 import logging
 from email_validator import validate_email, EmailNotValidError
 from colorama import Fore, Style, init
+import qrcode
+import webbrowser
 
 
 
@@ -52,11 +54,11 @@ def gmail():
    
 def check(input_gmail):
     try:
-        if not input_gmail : 
+        if not input_gmail:
             exit()
-        v = validate_email(input_gmail) 
+        v = validate_email(input_gmail, check_deliverability=False)
         validated_email = v["email"]
-        if not v["valid"]:
+        if not v.is_valid():
             logging.error(f"The provided email '{input_gmail}' is not valid.")
             raise EmailNotValidError(input_gmail)
         return validated_email
@@ -64,6 +66,7 @@ def check(input_gmail):
         print(f"{Fore.RED}Invalid email. Please try again.{Style.RESET_ALL}")
         logging.error("Invalid email entered by the user.")
         raise
+
 
 
 
@@ -121,6 +124,29 @@ def welcome(user_name, user_id, user_balance ,):
     logging.info(f"User Welcome Message: {welcome_message}")
     return welcome_message
 
+def qr_code(user_id, user_name, user_gmail):
+     data = f"""
+        Welcome {user_name} to Kernel Bank 🏦  :
+        Your ID is {user_id}
+        Your gmail is {user_gmail}
+        If you want to edit your account details , click on the link below
+        If you have any questions, please contact us at Kernel-rb on GitHub
+        """
+     qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+        )
+     qr.add_data(data)
+     qr.make(fit=True)
+     img = qr.make_image(fill_color="red", back_color="green")
+     img.save("qrcode.png")
+     print("QR Code Generated Successfully")
+     return os.path.abspath("qrcode.png")
+     
+
+
 
 def create_account():
     print("Creating Account...")
@@ -141,6 +167,12 @@ def create_account():
     user_welcome_message = welcome(user_name, user_id, user_balance)
     print(user_welcome_message)
     logging.info("User Account Created Successfully")
+    qr_code_path = qr_code(user_id, user_name, user_gmail)
+    web_page_content = f"<html><body><img src='file://{qr_code_path}'></body></html>"
+    web_page_path = "QrCode.html"
+    with open(web_page_path, "w") as web_page:
+        web_page.write(web_page_content)
+    webbrowser.open("file://" + os.path.abspath(web_page_path))
 
 
 def edit_account_details():

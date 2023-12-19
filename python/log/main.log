@@ -176,3 +176,31 @@
 2023-12-19 19:00:44,828 ERROR root Invalid email entered by the user.
 2023-12-19 19:00:44,828 ERROR root Invalid email: The email address is not valid. It must have exactly one @-sign.
 2023-12-19 19:00:49,345 INFO root User gmail is 
+2023-12-19 19:15:12,413 INFO root Logging is working
+2023-12-19 19:15:12,413 INFO root Program Started
+2023-12-19 19:15:12,413 INFO root Program Started
+2023-12-19 19:15:14,509 INFO root User Choice is 1
+2023-12-19 19:15:16,407 INFO root User name is saif
+2023-12-19 19:15:17,961 INFO root User is 19 years old
+2023-12-19 19:15:23,594 INFO root User gmail is kernel@gmail.com
+2023-12-19 19:16:26,653 INFO root Logging is working
+2023-12-19 19:16:26,653 INFO root Program Started
+2023-12-19 19:16:26,653 INFO root Program Started
+2023-12-19 19:16:27,916 INFO root User Choice is 1
+2023-12-19 19:16:29,441 INFO root User name is saif
+2023-12-19 19:16:32,523 INFO root User is 19 years old
+2023-12-19 19:16:37,528 INFO root User gmail is kernel@gmail.com
+2023-12-19 19:17:02,845 INFO root Logging is working
+2023-12-19 19:17:02,845 INFO root Program Started
+2023-12-19 19:17:02,845 INFO root Program Started
+2023-12-19 19:17:04,087 INFO root User Choice is 1
+2023-12-19 19:17:05,426 INFO root User name is kernel
+2023-12-19 19:17:06,751 INFO root User is 19 years old
+2023-12-19 19:17:12,342 INFO root User gmail is kerne@gmail.com
+2023-12-19 19:17:42,287 INFO root Logging is working
+2023-12-19 19:17:42,287 INFO root Program Started
+2023-12-19 19:17:42,287 INFO root Program Started
+2023-12-19 19:17:44,111 INFO root User Choice is 1
+2023-12-19 19:17:44,959 INFO root User name is saof
+2023-12-19 19:17:46,659 INFO root User is 19 years old
+2023-12-19 19:17:50,393 INFO root User gmail is kdklf@gmail.com
