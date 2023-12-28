@@ -9,9 +9,6 @@ from colorama import Fore, Style, init
 import qrcode
 import webbrowser
 
-
-
-
 # colorma Setup
 init(autoreset=True)
 # Logs Setup
@@ -23,8 +20,6 @@ log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s %(message)
 logging.info("Logging is working")
 logging.info("Program Started")
 
-
-
 def name():
     while True:
         input_name = input("Enter your name: ")
@@ -34,7 +29,6 @@ def name():
         else:
             print("Invalid Name, Only Alphabets Allowed")
             logging.error("Invalid Name, Only Alphabets Allowed")
-
 
 def age():
     input_age = int(input("Enter your age: "))
@@ -46,12 +40,11 @@ def age():
         logging.info(f"User is {input_age} years old")
         return input_age
 
-
 def gmail():
     input_gmail = input("Enter your gmail: ")
     logging.info(f"User gmail is {input_gmail}")
     return input_gmail
-   
+
 def check(input_gmail):
     try:
         if not input_gmail:
@@ -67,17 +60,10 @@ def check(input_gmail):
         logging.error("Invalid email entered by the user.")
         raise
 
-
-
-
 def address():
     input_address = input("Enter your address: ")
     logging.info(f"User address is {input_address}")
     return input_address
-    #TODO ; if the adress exists or not (API) of google maps or something
-    
-    
-
 
 def phone_number():
     while True:
@@ -98,20 +84,16 @@ def phone_number():
             print("Invalid Phone Number, Only 7 Digits Allowed")
             logging.error("Invalid Phone Number, Only 7 Digits Allowed")
 
-            #TODO ; make it better 
-
 def id_generator():
     unique_id = str(uuid.uuid4())
     logging.info(f"User ID is {unique_id}")
     return unique_id
 
-
 def balance():
     logging.info(f"User Balance is {0}")
     return 0
 
-
-def welcome(user_name, user_id, user_balance ,):
+def welcome(user_name, user_id, user_balance):
     welcome_message = f"""
     Welcome {user_name} to Kernel Bank 🏦  :
     Your ID is {user_id}
@@ -125,28 +107,25 @@ def welcome(user_name, user_id, user_balance ,):
     return welcome_message
 
 def qr_code(user_id, user_name, user_gmail):
-     data = f"""
+    data = f"""
         Welcome {user_name} to Kernel Bank 🏦  :
         Your ID is {user_id}
         Your gmail is {user_gmail}
         If you want to edit your account details , click on the link below
         If you have any questions, please contact us at Kernel-rb on GitHub
         """
-     qr = qrcode.QRCode(
+    qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
         box_size=10,
         border=4,
-        )
-     qr.add_data(data)
-     qr.make(fit=True)
-     img = qr.make_image(fill_color="red", back_color="green")
-     img.save("qrcode.png")
-     print("QR Code Generated Successfully")
-     return os.path.abspath("qrcode.png")
-     
-
-
+    )
+    qr.add_data(data)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="red", back_color="green")
+    img.save("qrcode.png")
+    print("QR Code Generated Successfully")
+    return os.path.abspath("qrcode.png")
 
 def create_account():
     print("Creating Account...")
@@ -174,23 +153,40 @@ def create_account():
         web_page.write(web_page_content)
     webbrowser.open("file://" + os.path.abspath(web_page_path))
 
-
 def edit_account_details():
     pass
 
 def deposit_money():
     pass
+
 def withdraw_money():
-    pass
+    account_number = input("Enter your account number: ")
+    withdrawal_amount = float(input("Enter the withdrawal amount: "))
+    current_balance = 1000.00  # Placeholder for current balance, replace with actual balance retrieval from database
+    withdrawal_limit = 500.00  # Placeholder for withdrawal limit, replace with actual limit retrieval from database
+
+    if withdrawal_amount > current_balance:
+        print("Error: Insufficient balance")
+        logging.error("Insufficient balance for withdrawal")
+    elif withdrawal_amount > withdrawal_limit:
+        print("Error: Withdrawal amount exceeds limit")
+        logging.error("Withdrawal amount exceeds limit")
+    else:
+        new_balance = current_balance - withdrawal_amount
+        print(f"Withdrawal successful. New balance: {new_balance}")
+        logging.info(f"Withdrawal successful. New balance: {new_balance}")
+
 def check_balance():
     pass
+
 def display_account_details():
     pass
+
 def transfer_money():
     pass
+
 def delete_account():
     pass
-
 
 def main():
     logging.info("Program Started")
@@ -242,7 +238,6 @@ def main():
     else:
         print("Invalid Choice , Only Numbers Allowed")
         logging.error("Invalid Choice , Only Numbers Allowed")
-
 
 if __name__ == "__main__":
     main()
