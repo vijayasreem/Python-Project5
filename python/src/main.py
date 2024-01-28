@@ -8,6 +8,7 @@ from email_validator import validate_email, EmailNotValidError
 from colorama import Fore, Style, init
 import qrcode
 import webbrowser
+from PIL import Image
 
 # colorma Setup
 init(autoreset=True)
@@ -106,7 +107,7 @@ def welcome(user_name, user_id, user_balance):
     logging.info(f"User Welcome Message: {welcome_message}")
     return welcome_message
 
-def qr_code(user_id, user_name, user_gmail):
+def qr_code(user_id, user_name, user_gmail, include_profile_image):
     data = f"""
         Welcome {user_name} to Kernel Bank 🏦  :
         Your ID is {user_id}
@@ -123,6 +124,13 @@ def qr_code(user_id, user_name, user_gmail):
     qr.add_data(data)
     qr.make(fit=True)
     img = qr.make_image(fill_color="red", back_color="green")
+    
+    if include_profile_image:
+        profile_image_path = input("Enter the path of your profile image: ")
+        profile_image = Image.open(profile_image_path)
+        profile_image.thumbnail((100, 100))
+        img.paste(profile_image, (100, 100))
+    
     img.save("qrcode.png")
     print("QR Code Generated Successfully")
     return os.path.abspath("qrcode.png")
@@ -146,7 +154,14 @@ def create_account():
     user_welcome_message = welcome(user_name, user_id, user_balance)
     print(user_welcome_message)
     logging.info("User Account Created Successfully")
-    qr_code_path = qr_code(user_id, user_name, user_gmail)
+    
+    include_profile_image = input("Do you want to include a profile image in the QR code? (y/n): ")
+    if include_profile_image.lower() == "y":
+        include_profile_image = True
+    else:
+        include_profile_image = False
+    
+    qr_code_path = qr_code(user_id, user_name, user_gmail, include_profile_image)
     web_page_content = f"<html><body><img src='file://{qr_code_path}'></body></html>"
     web_page_path = "QrCode.html"
     with open(web_page_path, "w") as web_page:
